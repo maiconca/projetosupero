@@ -7,6 +7,3 @@ https://msdn.microsoft.com/en-us/library/jj591621(v=vs.113).aspx
 
 Após os banco criado precisa-se rodar script localizado em ScriptSQL/TaskStatus.
 
-#Funcionalidades
-
-*Usuário pode pesquisar as tasks por status, descrição, código,
