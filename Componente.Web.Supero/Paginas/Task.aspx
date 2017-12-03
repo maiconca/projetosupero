@@ -12,6 +12,7 @@
   <link href="../Content/bootstrap.css" rel="stylesheet" />
   <link href="../Content/Site.css" rel="stylesheet" />
   <link href="../Content/GridView.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
@@ -23,12 +24,6 @@
         $('#modalTask').modal('show');
 
       });
-
-      $('#btnDetalhar').click(function () {
-        $('#modalTask').modal('show');
-        $('#modalTask').attr('disabled', true);
-      });
-
 
       $(".date").datetimepicker({
         locale: 'pt-br',
@@ -192,16 +187,13 @@
                 <div class="col-xs-12">
                   <label for="txtDescricaoCadastro" id="Label1" runat="server"><%:Componente.Supero.Dicionario.Resource.Descricao %></label>
                   <asp:TextBox ID="txtDescricaoCadastro" CssClass="form-control" runat="server"></asp:TextBox>
-                  <asp:RequiredFieldValidator Display="Dynamic" ForeColor="Red" ID="rfvTxtFornecedor" Enabled="false" runat="server"
-                    ControlToValidate="txtDescricaoCadastro" ErrorMessage="<%$ Code: Resource.CampoObrigatorio %>"
-                    ValidationGroup="vlgSalvaTask" />
                 </div>
               </div>
             </div>
             <div id="divRodaPeModal" runat="server" style="padding: 0" class="modal-footer">
               <div class="form-group linhaBotao">
                 <div class="col-xs-12">
-                  <asp:Button ID="btnSalvarTask" ValidationGroup="vlgSalvaTask" Text="<%$ Code: Resource.Salvar %>" OnClick="btnSalvarTask_Click" CssClass="btn btn-primary" runat="server" />
+                  <asp:Button ID="btnSalvarTask" Text="<%$ Code: Resource.Salvar %>" OnClick="btnSalvarTask_Click" CssClass="btn btn-primary" runat="server" />
                 </div>
               </div>
             </div>
