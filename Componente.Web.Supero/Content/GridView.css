@@ -1,0 +1,96 @@
+﻿.GridViewCabecalho {
+    background-color: #286090;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 6px;
+    text-align: center;
+    border: 1px solid #ddd;
+    height: 32px;
+    text-align: center;
+}
+
+    .GridViewCabecalho th {
+        text-align: center;
+    }
+
+    .GridViewCabecalho a, .GridViewCabecalho a:focus, .GridViewCabecalho a:hover {
+        color: white;
+    }
+
+
+
+.line_table_even {
+    font-size: 12px;
+    background-color: #E8ECF5;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.line_header_footer {
+    background-color: #369 /*#141F78;*/;
+    color: #FFFFFF;
+    border: 1px solid #ddd;
+    font-family: Verdana, arial;
+    font-size: x-small;
+    font-weight: bold;
+    height: 20px;
+}
+
+.line_table_odd {
+    font-size: 12px;
+    background-color: #C7D1E6;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.data_table {
+    font-family: Verdana, Arial;
+    font-size: xx-small;
+    border: 1px solid white;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 3px;
+    /*table-layout: fixed;*/
+}
+
+.alinhamento {
+    text-align: right;
+}
+
+.Pager {
+    word-spacing: 2px;
+    border: 1px solid #ddd;
+    background-color: #76b5eb;
+    text-align: center;
+}
+
+table tr td {
+    border: 1px solid white;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.LinhaSelecionada {
+    background-color: #f3d673;
+    color: black;
+    height: 22px;
+    font-size: 12px
+}
+
+
+input[type="checkbox"] {
+    -ms-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    padding: 10px;
+}
