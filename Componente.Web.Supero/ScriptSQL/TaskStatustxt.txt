@@ -1,0 +1,26 @@
+﻿USE [SuperoDB]
+GO
+
+INSERT INTO [dbo].[TaskStatus]
+           ([Descricao])
+     VALUES
+           ('Aberto')
+GO
+
+INSERT INTO [dbo].[TaskStatus]
+           ([Descricao])
+     VALUES
+           ('Reprovado')
+GO
+
+INSERT INTO [dbo].[TaskStatus]
+           ([Descricao])
+     VALUES
+           ('Aporovado')
+GO
+
+INSERT INTO [dbo].[TaskStatus]
+           ([Descricao])
+     VALUES
+           ('Concluído')
+GO
