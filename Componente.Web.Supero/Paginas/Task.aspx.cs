@@ -50,6 +50,7 @@ namespace Componente.Web.Supero.Paginas
       ddlTaskStatus.DataSource = Sessions.ListaTaskStatus;
       ddlTaskStatus.DataBind();
 
+      ddlTaskStatus.Items.Insert(0, new System.Web.UI.WebControls.ListItem(Resource.Selecione + "...", "0"));
     }
 
     protected void btnPesquisa_Click(object sender, EventArgs e)
@@ -98,7 +99,7 @@ namespace Componente.Web.Supero.Paginas
       {
         case DataControlRowType.Header:
           e.Row.Cells[IndexColunaGvTask.cDescricao].Width = new Unit("50%");
-          e.Row.Cells[IndexColunaGvTask.cAcao].Width = new Unit("233");
+          e.Row.Cells[IndexColunaGvTask.cAcao].Width = new Unit("194");
           break;
         case DataControlRowType.DataRow:
           Componente.Supero.Task.Task t = e.Row.DataItem as Componente.Supero.Task.Task;
@@ -131,7 +132,7 @@ namespace Componente.Web.Supero.Paginas
 
     protected void gvTask_RowCommand(object sender, GridViewCommandEventArgs e)
     {
-      if (!e.CommandName.Equals("btnEditar") && !e.CommandName.Equals("btnExcluir") && !e.CommandName.Equals("btnDetalhar") && !e.CommandName.Equals("btnAprovar") && !e.CommandName.Equals("btnReprovar") && !e.CommandName.Equals("btnConcluir"))
+      if (!e.CommandName.Equals("btnEditar") && !e.CommandName.Equals("btnExcluir") && !e.CommandName.Equals("btnAprovar") && !e.CommandName.Equals("btnReprovar") && !e.CommandName.Equals("btnConcluir"))
       {
         return;
       }
@@ -149,10 +150,6 @@ namespace Componente.Web.Supero.Paginas
 
         case "btnExcluir":
           btnExcluirTask_Click();
-          break;
-
-        case "btnDetalhar":
-          btnDetalharTask_Click();
           break;
 
         case "btnAprovar":

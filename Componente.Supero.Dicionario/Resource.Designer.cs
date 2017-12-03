@@ -79,6 +79,15 @@ namespace Componente.Supero.Dicionario {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Campo Obrigatório.
+        /// </summary>
+        public static string CampoObrigatorio {
+            get {
+                return ResourceManager.GetString("CampoObrigatorio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Código.
         /// </summary>
         public static string Codigo {
@@ -219,6 +228,15 @@ namespace Componente.Supero.Dicionario {
         public static string Salvar {
             get {
                 return ResourceManager.GetString("Salvar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Selecione.
+        /// </summary>
+        public static string Selecione {
+            get {
+                return ResourceManager.GetString("Selecione", resourceCulture);
             }
         }
         

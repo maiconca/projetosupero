@@ -24,6 +24,12 @@
 
       });
 
+      $('#btnDetalhar').click(function () {
+        $('#modalTask').modal('show');
+        $('#modalTask').attr('disabled', true);
+      });
+
+
       $(".date").datetimepicker({
         locale: 'pt-br',
         ignoreReadonly: true
@@ -139,10 +145,6 @@
                 <asp:TemplateField ShowHeader="False">
                   <ItemTemplate>
                     <%--<div style="float: right">--%>
-                    <asp:LinkButton ID="btnDetalhar" CommandArgument='<%# ((GridViewRow) Container).RowIndex %>' CommandName="btnDetalhar" runat="server" CssClass="btn btn-info btn-sm Pagina Detalhar" data-toggle="tooltip" data-placement="bottom" title="<%$ Code: Resource.Detalhar %>" data-original-title="<%$ Code: Resource.Detalhar %>">
-  <span runat="server" class="glyphicon glyphicon-list"></span>
-                    </asp:LinkButton>
-
                     <asp:LinkButton ID="btnEditar" CommandArgument='<%# ((GridViewRow) Container).RowIndex %>' CommandName="btnEditar" runat="server" CssClass="btn btn-warning btn-sm Pagina Editar" data-toggle="tooltip" data-placement="bottom" title="<%$ Code: Resource.Editar %>" data-original-title="<%$ Code: Resource.Editar %>">
   <span runat="server" class="glyphicon glyphicon-pencil"></span>
                     </asp:LinkButton>
@@ -190,13 +192,16 @@
                 <div class="col-xs-12">
                   <label for="txtDescricaoCadastro" id="Label1" runat="server"><%:Componente.Supero.Dicionario.Resource.Descricao %></label>
                   <asp:TextBox ID="txtDescricaoCadastro" CssClass="form-control" runat="server"></asp:TextBox>
+                  <asp:RequiredFieldValidator Display="Dynamic" ForeColor="Red" ID="rfvTxtFornecedor" Enabled="false" runat="server"
+                    ControlToValidate="txtDescricaoCadastro" ErrorMessage="<%$ Code: Resource.CampoObrigatorio %>"
+                    ValidationGroup="vlgSalvaTask" />
                 </div>
               </div>
             </div>
             <div id="divRodaPeModal" runat="server" style="padding: 0" class="modal-footer">
               <div class="form-group linhaBotao">
                 <div class="col-xs-12">
-                  <asp:Button ID="btnSalvarTask" ValidationGroup="vlgItemPedido" Text="<%$ Code: Resource.Salvar %>" OnClick="btnSalvarTask_Click" CssClass="btn btn-primary" runat="server" />
+                  <asp:Button ID="btnSalvarTask" ValidationGroup="vlgSalvaTask" Text="<%$ Code: Resource.Salvar %>" OnClick="btnSalvarTask_Click" CssClass="btn btn-primary" runat="server" />
                 </div>
               </div>
             </div>

@@ -123,6 +123,9 @@
   <data name="CadastrarTask" xml:space="preserve">
     <value>Cadastrar Task</value>
   </data>
+  <data name="CampoObrigatorio" xml:space="preserve">
+    <value>Campo Obrigatório</value>
+  </data>
   <data name="Codigo" xml:space="preserve">
     <value>Código</value>
   </data>
@@ -170,6 +173,9 @@
   </data>
   <data name="Salvar" xml:space="preserve">
     <value>Salvar</value>
+  </data>
+  <data name="Selecione" xml:space="preserve">
+    <value>Selecione</value>
   </data>
   <data name="TaskStatus" xml:space="preserve">
     <value>Task Status</value>
